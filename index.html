@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script type="text/javascript"> 
+$(document).ready(function(){
+  $(".flip").mouseover(function(){
+    $(this).next("div").slideDown(500);
+    console.log(this);
+  });
+  $(".content").mouseleave(function(){
+    $(this).children("div").slideUp(500);
+  });
+});
+</script>
+   
+<style type="text/css"> 
+div.panel,p.flip
+{
+  
+margin:0px;
+padding:5px;
+text-align:center;
+
+border:solid 1px #c3c3c3;
+}
+div.panel
+{
+  
+height:120px;
+display:none;
+}
+</style>
+   
+<body>
+ <div class="content" style="float:left;display:block;width:300px;">
+<p class="flip">滑过这里</p>
+<div class="panel">
+<p>11111111111111111</p>
+<p>2222222222222222222222</p>
+</div>
+ </div>
+<div class="content" style="float:left;display:block;width:300px;">
+<p class="flip">滑过这里</p>
+<div class="panel">
+<p>11111111111111111</p>
+<p>2222222222222222222222</p>
+</div>
+ </div>
+</body>
+</html>
